@@ -51,6 +51,11 @@ def subtract_me(number_1: int, number_2: int):
     diff = number_2 - number_1
     return {"difference": diff}
 
+@app.get("/multiply/{number_1}/{number_2}")
+def multiply_me(number1: int, number2: int):
+    mul = number_1 * number_2
+    return {"product": mul}
+
 ## Parameters
 # Introduce parameter data types and defaults from the Optional library
 @app.get("/items/{item_id}")
