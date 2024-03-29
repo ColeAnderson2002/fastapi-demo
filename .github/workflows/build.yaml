@@ -4,9 +4,10 @@ on:
   workflow_dispatch:
   push:
     branches: [ main ]
+
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: coleanderson2002/fastapi-demo  
+  IMAGE_NAME: ${{ github.actor }}/fastapi-demo  
   IMAGE_TAG: 1.${{ github.run_number }} # GITHUB_RUN_NUMBER
 
 jobs:
