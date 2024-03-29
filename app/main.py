@@ -56,6 +56,11 @@ def multiply_me(number1: int, number2: int):
     mul = number_1 * number_2
     return {"product": mul}
 
+@app.get("/square/{number}")
+def square_me(number: int):
+    squared = number ** 2
+    return {"square": squared}
+
 ## Parameters
 # Introduce parameter data types and defaults from the Optional library
 @app.get("/items/{item_id}")
