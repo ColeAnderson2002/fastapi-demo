@@ -48,7 +48,7 @@ def divide_me(number_1: int, number_2: int):
 
 @app.get("/subtract/{number_1}/{number_2}")
 def subtract_me(number_1: int, number_2: int):
-    diff = number_2 - number_1
+    diff = number_1 - number_2
     return {"difference": diff}
 
 @app.get("/multiply/{number_1}/{number_2}")
