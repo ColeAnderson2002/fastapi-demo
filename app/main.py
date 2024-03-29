@@ -41,12 +41,12 @@ def add_me(number_1: int, number_2: int):
     return {"sum": sum}
 
 # Let's develop a new one:
-@app.get("/'divide/{number_1}/{number_2}")
+@app.get("/divide/{number_1}/{number_2}")
 def divide_me(number_1: int, number_2: int):
     div = number_2 / number_1
     return {"quotient": div}
 
-@app.get("/'subtract/{number_1}/{number_2}")
+@app.get("/subtract/{number_1}/{number_2}")
 def subtract_me(number_1: int, number_2: int):
     diff = number_2 - number_1
     return {"difference": diff}
