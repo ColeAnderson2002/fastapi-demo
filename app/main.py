@@ -92,6 +92,16 @@ def get_albums():
     db.close()
     return results
 
+# Data Project step 4.16
+@app.get("/albums/{id}")
+def get_one_album(id):
+    db = MySQLdb.connect(host=DBHOST, user=DBUSER, passwd=DBPASS, db=DB)
+    c = db.cursor(MySQLdb.cursors.DictCursor)
+    c.execute("SELECT * FROM albums WHERE id=" + id)
+    results = c.fetchall()
+    db.close()
+    return results
+
 
 
 
