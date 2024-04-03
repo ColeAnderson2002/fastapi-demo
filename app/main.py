@@ -82,6 +82,10 @@ def read_items(item_id: int, q: str = None, s: str = None):
     # - another api (external)
     return {"item_id": item_id, "q": q, "s": s}
 
+# Data Project
+@app.get("/albums")
+def get_albums():
+
 
 ## Data Modeling
 # Model data you are expecting.
