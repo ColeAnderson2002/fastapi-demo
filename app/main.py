@@ -89,6 +89,7 @@ def get_albums():
     c = db.cursor(MySQLdb.cursors.DictCursor)
     c.execute("""SELECT * FROM albums ORDER BY name""")
     results = c.fetchall()
+    db.close()
     return results
 
 
